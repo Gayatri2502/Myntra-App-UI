@@ -12,19 +12,22 @@ class BrandsSlider extends StatefulWidget {
 class _BrandsSliderState extends State<BrandsSlider> {
   @override
   Widget build(BuildContext context) {
-    return  CarouselSlider(items: Brands.map((e) {
-      return Image.asset(e, scale: 1.5,fit: BoxFit.fill,);
-    }).toList(),
+    return CarouselSlider(
+        items: Brands.map((e) {
+          return Image.asset(
+            e,
+            scale: 1.5,
+            fit: BoxFit.fill,
+          );
+        }).toList(),
         options: CarouselOptions(
             height: 150,
             initialPage: 1,
             animateToClosest: true,
-            viewportFraction: 0.45,
+            viewportFraction: 0.8,
             autoPlay: true,
             enableInfiniteScroll: true,
             enlargeCenterPage: true,
-            autoPlayInterval: const Duration(seconds: 4)
-
-        ));
+            autoPlayInterval: const Duration(seconds: 4)));
   }
 }

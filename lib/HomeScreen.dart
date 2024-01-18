@@ -83,9 +83,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Row(
                   children: [
-                    SizedBox(
-                      width: 180,
+                    const SizedBox(
+                      width: 25,
+                    ),
+                    Container(
+                      width: 150,
                       height: 50,
+                      padding: EdgeInsets.all(5),
+                      alignment: Alignment.center,
                       child: ElevatedButton(
                           onPressed: () {},
                           child: Row(
@@ -112,9 +117,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       width: 20,
                     ),
-                    SizedBox(
-                      width: 180,
+                    Container(
+                      width: 150,
                       height: 50,
+                      padding: EdgeInsets.all(5),
+                      alignment: Alignment.center,
                       child: ElevatedButton(
                           onPressed: () {},
                           child: Row(
@@ -152,134 +159,150 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                     'Sign Up For Exciting Deals !',
                     style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold
-                    ),
+                        color: Colors.white, fontWeight: FontWeight.bold),
                   )),
                 ),
                 Container(
-                  height: 120,
-                  width: MediaQuery.of(context).size.width,
-                  color: Colors.red.shade50,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 80,
-                        width: 225,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.red.shade200,
+                    height: 120,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.red.shade50,
+                    padding: EdgeInsets.all(18),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 160,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red.shade200,
+                          ),
+                          child: const Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'New User',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text('Flat 200/- off')
+                            ],
+                          ),
                         ),
-                        child: const Column(
-                          children: [
-                            Text('New User',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-                            Text('Flat 200/- off')
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Container(
-                        height: 80,
-                        width: 140,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.red.shade100,
-                        ),
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Apply Promo Code',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12,)),
-                            Text('USER2502',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15))
-                          ],
-                        ),
-                      )
-
-                    ],
-                  )
-                ),
-
+                        const SizedBox(width: 10),
+                        Container(
+                          height: 80,
+                          width: 160,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red.shade100,
+                          ),
+                          child: const Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Apply Promo Code',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )),
+                              Text('USER2502',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15))
+                            ],
+                          ),
+                        )
+                      ],
+                    )),
                 Container(
                     color: Colors.blue.shade50,
                     padding: const EdgeInsets.all(8),
-                    height: 250,
+                    height: 170,
                     width: MediaQuery.of(context).size.width,
                     child: const AdvertiseCarousel()),
-                Container(
+                SizedBox(
                   height: 80,
                   width: MediaQuery.of(context).size.width,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        width: 135,
-                        height: 50,
-                        child: ElevatedButton(onPressed: (){},
-                            style: ElevatedButton.styleFrom(
+                      ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              fixedSize: Size(115, 50),
                               backgroundColor: Colors.teal,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              shadowColor: Colors.teal.shade50
-                            ),
-                            child: const Row(
-                          children: [
-                            Icon(Icons.gpp_good, color: Colors.white,),
-                            Padding(
-                              padding: EdgeInsets.all(4.0),
-                              child: Text('100% Orignal\nProducts',style: TextStyle(
-                                  fontSize: 8,fontWeight: FontWeight.bold, color: Colors.white)),
-                            )
-                          ],
-                        )),
-                      ),
-                      SizedBox(width: 5,),
+                              shadowColor: Colors.teal.shade50),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.gpp_good,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              Text('100% Orignal\nProducts',
+                                  style: TextStyle(
+                                      fontSize: 9.5,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white))
+                            ],
+                          )),
                       SizedBox(
-                        width: 138,
-                        height: 50,
-                        child: ElevatedButton(onPressed: (){},
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.teal,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                shadowColor: Colors.teal.shade50
-                            ),
-                            child: const Row(
-                              children: [
-                                Icon(Icons.price_check_rounded, color: Colors.white,),
-                                Padding(
-                                  padding: EdgeInsets.all(4.0),
-                                  child: Text('Free Shipping\nOn 1st Order',style: TextStyle(
-                                      fontSize: 8,fontWeight: FontWeight.bold, color: Colors.white)),
-                                )
-                              ],
-                            )),
+                        width: 5,
                       ),
-                      SizedBox(width: 5,),
+                      ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              fixedSize: Size(117, 50),
+                              backgroundColor: Colors.teal,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              shadowColor: Colors.teal.shade50),
+                          child: const Row(
+                            children: [
+                              Icon(
+                                Icons.price_check_rounded,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              Text('Free Shipping\nOn 1st Order',
+                                  style: TextStyle(
+                                      fontSize: 9.5,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white))
+                            ],
+                          )),
                       SizedBox(
-                        width: 120,
-                        height: 50,
-                        child: ElevatedButton(onPressed: (){},
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.teal,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                shadowColor: Colors.teal.shade50
-                            ),
-                            child: const Row(
-                              children: [
-                                Icon(Icons.delivery_dining_rounded, color: Colors.white,),
-                                Padding(
-                                  padding: EdgeInsets.all(4.0),
-                                  child: Text('Easy returns\n& Refund',style: TextStyle(
-                                      fontSize: 8,fontWeight: FontWeight.bold, color: Colors.white)),
-                                )
-                              ],
-                            )),
+                        width: 5,
                       ),
+                      ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              fixedSize: Size(115, 50),
+                              backgroundColor: Colors.teal,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              shadowColor: Colors.teal.shade50),
+                          child: const Row(
+                            children: [
+                              Icon(
+                                Icons.delivery_dining_rounded,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              Text('Easy returns\n& Refund',
+                                  style: TextStyle(
+                                      fontSize: 9.5,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white))
+                            ],
+                          )),
                     ],
                   ),
                 ),
@@ -290,60 +313,66 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.red.shade50,
                     child: const BrandsSlider()),
                 const FeatureSlider(),
-                Container(
-                    padding: const EdgeInsets.all(16),
-                    height: 140,
-                    child: const CategoriesSlider()),
-                Container(
-                    color: Colors.blue.shade50,
-                    padding: const EdgeInsets.all(8),
-                    height: 250,
-                    width: MediaQuery.of(context).size.width,
-                    child: const AdvertiseCarousel()),
-
-                Container(
-                    height: 120,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.red.shade50,
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 80,
-                          width: 225,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red.shade200,
-                          ),
-                          child: const Column(
-                            children: [
-                              Text('New User',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-                              Text('Flat 200/- off')
-                            ],
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        Container(
-                          height: 80,
-                          width: 140,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red.shade100,
-                          ),
-                          child: const Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text('Apply Promo Code',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12,)),
-                              Text('USER2502',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
-                            ],
-                          ),
-                        )
-
-                      ],
-                    )
-                ),
-
-
+                // Container(
+                //     padding: const EdgeInsets.all(16),
+                //     height: 140,
+                //     child: const CategoriesSlider()),
+                // Container(
+                //     color: Colors.blue.shade50,
+                //     padding: const EdgeInsets.all(8),
+                //     height: 250,
+                //     width: MediaQuery.of(context).size.width,
+                //     child: const AdvertiseCarousel()),
+                // Container(
+                //     height: 120,
+                //     width: MediaQuery.of(context).size.width,
+                //     color: Colors.red.shade50,
+                //     child: Row(
+                //       children: [
+                //         Container(
+                //           height: 80,
+                //           width: 225,
+                //           decoration: BoxDecoration(
+                //             borderRadius: BorderRadius.circular(20),
+                //             color: Colors.red.shade200,
+                //           ),
+                //           child: const Column(
+                //             children: [
+                //               Text(
+                //                 'New User',
+                //                 style: TextStyle(
+                //                     fontWeight: FontWeight.bold, fontSize: 25),
+                //               ),
+                //               Text('Flat 200/- off')
+                //             ],
+                //           ),
+                //         ),
+                //         const SizedBox(width: 10),
+                //         Container(
+                //           height: 80,
+                //           width: 140,
+                //           decoration: BoxDecoration(
+                //             borderRadius: BorderRadius.circular(20),
+                //             color: Colors.red.shade100,
+                //           ),
+                //           child: const Column(
+                //             crossAxisAlignment: CrossAxisAlignment.center,
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Text('Apply Promo Code',
+                //                   style: TextStyle(
+                //                     fontWeight: FontWeight.bold,
+                //                     fontSize: 12,
+                //                   )),
+                //               Text('USER2502',
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 20))
+                //             ],
+                //           ),
+                //         )
+                //       ],
+                //     )),
               ],
             ),
           )

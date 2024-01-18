@@ -13,16 +13,18 @@ class FeatureSlider extends StatefulWidget {
 class _FeatureSliderState extends State<FeatureSlider> {
   @override
   Widget build(BuildContext context) {
-    return CarouselSlider(items: Features.map((e) {
-      return Image.asset(e, scale: 1,fit: BoxFit.fill,);
-    }).toList(),
+    return CarouselSlider(
+        items: Features.map((e) {
+          return Image.asset(
+            e,
+            scale: 1,
+            fit: BoxFit.fill,
+          );
+        }).toList(),
         options: CarouselOptions(
           scrollDirection: Axis.horizontal,
-            height: 350,
-
-            viewportFraction: 0.6,
-
-
+          height: 260,
+          viewportFraction: 0.6,
         ));
   }
 }
